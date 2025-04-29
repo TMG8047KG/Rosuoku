@@ -1,0 +1,189 @@
+.sudokuContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 500px;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+  }
+  
+  .gameHeader {
+    display: flex;
+    margin-bottom: 20px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .difficultySelector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .difficultySelector select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .gameStats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .timer {
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .mistakes {
+    color: #e53935;
+  }
+  
+  .newGameBtn {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+  }
+  
+  .newGameBtn:hover {
+    background-color: #3a80d2;
+  }
+  
+  .errorMessage {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+    animation: fadeIn 0.3s;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .sudokuGrid {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .sudokuRow {
+    display: flex;
+  }
+  
+  .sudokuCell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s;
+  }
+  
+  .selected {
+    background-color: #e6f2ff;
+  }
+  
+  .original {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .invalid {
+    color: #e53935;
+  }
+  
+  .highlighted {
+    color: #f57c00;
+    background-color: #fff3e0;
+  }
+  
+  .borderBottom {
+    border-bottom: 2px solid #333;
+  }
+  
+  .borderRight {
+    border-right: 2px solid #333;
+  }
+  
+  .successOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s;
+  }
+  
+  .successModal {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: scaleIn 0.3s;
+  }
+  
+  @keyframes scaleIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  .successModal h2 {
+    color: #4caf50;
+    margin-top: 0;
+  }
+  
+  .successModal p {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .successModal button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .successModal button:hover {
+    background-color: #3b9f3e;
+  }
+  
+  .instructions {
+    margin-top: 20px;
+    color: #666;
+    text-align: center;
+    font-size: 14px;
+  }

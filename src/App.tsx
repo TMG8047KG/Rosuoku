@@ -1,10 +1,13 @@
 import "./App.css";
+import Board from "./Board";
 
 function App() {
   return (
-    <div>
-      <button>Rosuoku</button>
-    </div>
+    <div className="container">
+    <h1>Rosuoku</h1>
+    <p>A Rust + React Sudoku Game</p>
+    <Board />
+  </div>
   );
 }
 
